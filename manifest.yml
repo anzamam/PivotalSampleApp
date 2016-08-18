@@ -1,0 +1,8 @@
+---
+applications:
+ - name: trSender_app
+   buildpack: java_buildpack
+   path: target/trSenderService-0.0.1-SNAPSHOT.jar
+   command: java -Xmx256m -Xms256m -jar ./target/people-finder-product-1.0.0-SNAPSHOT.jar
+   services:
+    - pocDB
